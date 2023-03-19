@@ -2,22 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 11</title>
+    <title>Page title</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <form class="search-form" id="search-form">
       <input
+        class="input"
         type="text"
         name="searchQuery"
         autocomplete="off"
         placeholder="Search images..."
       />
-      <button type="submit">Search</button>
+      <button class="btn" type="submit">Search</button>
     </form>
-    <div class="gallery"></div>
-    <button type="button" class="load-more hidden">Load more</button>
-    <script src="index.js" type="module"></script>
+    <div class="gallery container"></div>
+    <div class="btn-load-container">
+      <button class="hidden btn-load" type="button" data-action="load-more">
+        Load more
+      </button>
+    </div>
+    <button
+      type="button"
+      class="btn-down animate__animated animate__pulse hidden"
+    >
+      <svg width="25" height="25" viewBox="0 0 20 20">
+        <path
+          d="M10 14.583L4.167 8.75a1.25 1.25 0 1 1 1.768-1.768l4.583 4.583 4.583-4.583a1.25 1.25 0 1 1 1.768 1.768L10 14.583z"
+        ></path>
+      </svg>
+    </button>
+
+    <button
+      type="button"
+      class="btn-up animate__animated animate__pulse hidden"
+    >
+      <svg width="25" height="25" viewBox="0 0 20 20" class="svg-rotate">
+        <path
+          d="M10 14.583L4.167 8.75a1.25 1.25 0 1 1 1.768-1.768l4.583 4.583 4.583-4.583a1.25 1.25 0 1 1 1.768 1.768L10 14.583z"
+        ></path>
+      </svg>
+    </button>
+    <div id="sentinel"></div>
+
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
