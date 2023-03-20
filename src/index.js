@@ -193,7 +193,7 @@ function arrfetchImages() {
       photoApiService.totalHits / photoApiService.perPage
     );
 
-    if (photoApiService.page > totalPages) {
+    if (photoApiService.page >= totalPages) {
       Notiflix.Notify.failure(
         "We're sorry, but you've reached the end of search results."
       );
